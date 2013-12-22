@@ -18,7 +18,7 @@ class Entity extends \Eloquent {
 			->withPivot('entity_field_value', 'entity_id', 'field_id', 'sort_order')
 			->orderBy('sort_order');
 	}
-	
+
 	public function entity_field_value(\Entityinator\Entityapi\Models\Field $field)
 	{
 		return Field::make($field);

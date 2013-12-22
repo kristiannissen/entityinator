@@ -1,8 +1,7 @@
 <?php namespace Entityinator\Entityapi\Models;
 
 class Field extends \Eloquent {
-	
-	public static $INTEGER = 'integer';
+
 	// Fields have no need for timestamps
 	public $timestamps = false;
 	

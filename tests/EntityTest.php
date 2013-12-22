@@ -60,7 +60,7 @@ class EntityTest extends TestCase {
 		foreach (range(1, 10) as $id) {
 			$field = new Entityinator\Entityapi\Models\Field;
 			$field->name = 'Super Field '. $id;
-			$field->field_type = Entityinator\Entityapi\Models\Field::$INTEGER;
+			$field->field_type = 'integer';
 			$field->save();
 			
 			$entity->fields()->save($field, ['entity_field_value' => 1 + $id, 'sort_order' => $id]);
