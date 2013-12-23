@@ -1,7 +1,7 @@
 <?php namespace Entityinator\Entityapi\Models;
 
 class Entity extends \Eloquent {
-	
+
 	public function parent()
 	{
 		return $this->belongsTo('Entityinator\Entityapi\Models\Entity', 'parent_id', 'id');

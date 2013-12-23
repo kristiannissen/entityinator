@@ -70,5 +70,15 @@ class EntityTest extends TestCase {
 		
 		$this->assertTrue(is_int($entity->entity_field_value($field)));
 	}
+
+  public function testEntityObserver()
+  {
+    Entityinator\Entityapi\Models\Entity::observe(new Entityinator\Entityapi\Models\EntityObserver);
+
+    $entity = new Entityinator\Entityapi\Models\Entity;
+    $entity->name = 'Hello Pussy';
+
+    $this->assertEquals('Hello Pussy', $entity->name);
+  }
 	
 }
