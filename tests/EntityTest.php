@@ -1,6 +1,7 @@
 <?php
-
-
+/**
+ * @author Kristian Nissen kristian.nissen@gmail.com
+ */
 class EntityTest extends TestCase {
 	
 	public function setUp()
@@ -11,7 +12,10 @@ class EntityTest extends TestCase {
 			'--bench' => 'entityinator/entityapi',
 		));
 	}
-	
+  /**
+   * This testcase demonstrates the parent child relationship between
+   * Entities. An Entity can have 1 parent
+   */
 	public function testEntitySTIRelationship()
 	{
 		$main_entity = new Entityinator\Entityapi\Models\Entity;
